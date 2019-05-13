@@ -54,14 +54,16 @@ topContent.textContent = "Innovation On Demand";
 
 let button = document.querySelector('button');
 button.textContent = "Get Started";
-//button.setAttribute('style', 'color: green');
+// button.setAttribute('style', 'color: green');
 
-/*
-let nav = document.querySelectorAll("nav a");
-for (i = 0; i < nav.length; i++) {
-  nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
-}
-*/
+
+// NAV BAR 
+
+// let nav = document.querySelectorAll("nav a");
+// for (i = 0; i < nav.length; i++) {
+//   nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+// }
+
 let navBar = document.querySelector('nav');
 let navLinks = navBar.querySelectorAll('a');
 let navObj = siteContent.nav;
@@ -72,7 +74,20 @@ let navValues = Object.values(navObj);
 //navValues.setAttribute('style', 'color: green');
 
 
-// LOOP TRIED
+const navNew = document.createElement('a');
+navNew.textContent = 'Home';
+
+const nav = document.querySelector('nav');
+nav.appendChild(navNew);
+
+const navNew1 = document.createElement('a');
+navNew1.textContent = 'Blog';
+
+const nav1 = document.querySelector('nav');
+nav.appendChild(navNew1);
+// MIDDLE CONTENT 
+
+// loop tried
 /*
 let mainContent = document.querySelectorAll('section h4');
 for (let i = 1; i < mainContent.clientHeight; i++) {
@@ -112,26 +127,53 @@ visionTitle.textContent = siteContent["main-content"]["vision-h4"];
 let visionContent = document.querySelector('div.bottom-content > div:nth-child(3) > p');
 visionContent.textContent = siteContent["main-content"]["vision-content"];
 
+// CONTACT
 
-/*
-let navigation1 = document.querySelector("body > div > header > nav > a:nth-child(1)").textContent = "Home";
-let navigation2 = document.querySelector("body > div > header > nav > a:nth-child(2)").textContent = "About";
-let navigation3 = document.querySelector("body > div > header > nav > a:nth-child(3)").textContent = "Contact";
-let navigation4 = document.querySelector("body > div > header > nav > a:nth-child(4)").textContent = "Home";
-let navigation5 = document.querySelector("body > div > header > nav > a:nth-child(5)").textContent = "Home";
-let navigation6 = document.querySelector("body > div > header > nav > a:nth-child(6)").textContent = "Home";
+let contactTitle = document.querySelector(' section.contact > h4');
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
 
-let nav = documnet.querySelector('nav');
-nav.style.color = "inherit";
+//let contactInfo = document.querySelector('section.contact > p');
+//contactInfo.textContent = siteContent["contact"]["address"]
 
-*/
 
-/*
-const paragraph = document.createElement('p');
-paragraph.textContent = 'This is a new paragraph';
-paragraph.id = 'fancyParagraph';
-paragraph.classList.add('cursive');
-const section = document.querySelector('section[main-content]');
-section.insertAdjacentElement('beforebegin', paragraph);
-*/
+//const contactBar = document.querySelector('.contact');
+const contactP = document.querySelectorAll(' section.contact > p');
+let contactObj = siteContent.contact;
+let contactValues = Object.values(contactObj);
+[...contactP].forEach((p, index) => {
+  p.textContent = contactValues[index+1];
+})
+
+// let contact = document.querySelector('.contact p');
+// for (let i = 0; contact.lenght; i++) {
+//   contact[i].textContent = siteContent.contact[`contact {i+i}`];
+// }
+
+// let nav = document.querySelectorAll("nav a");
+// for (i = 0; i < nav.length; i++) {
+//   nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+// }
+
+
+// let navBar = document.querySelector('nav');
+// let navLinks = navBar.querySelectorAll('a');
+// let navObj = siteContent.nav;
+// let navValues = Object.values(navObj);
+// [...navLinks].forEach((link, index) => {
+//   link.textContent = navValues[index];
+// });
+
+// let navigation1 = document.querySelector("body > div > header > nav > a:nth-child(1)").textContent = "Home";
+// let navigation2 = document.querySelector("body > div > header > nav > a:nth-child(2)").textContent = "About";
+// let navigation3 = document.querySelector("body > div > header > nav > a:nth-child(3)").textContent = "Contact";
+// let navigation4 = document.querySelector("body > div > header > nav > a:nth-child(4)").textContent = "Home";
+// let navigation5 = document.querySelector("body > div > header > nav > a:nth-child(5)").textContent = "Home";
+// let navigation6 = document.querySelector("body > div > header > nav > a:nth-child(6)").textContent = "Home";
+
+// let nav = documnet.querySelector('nav');
+// nav.style.color = "inherit";
+
+
+
+
 
