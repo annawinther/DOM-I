@@ -74,6 +74,7 @@ let navValues = Object.values(navObj);
 //navValues.setAttribute('style', 'color: green');
 
 
+// NEW CONTENT USING .appendChild()
 const navNew = document.createElement('a');
 navNew.textContent = 'Home';
 
@@ -85,15 +86,23 @@ navNew1.textContent = 'Blog';
 
 const nav1 = document.querySelector('nav');
 nav.appendChild(navNew1);
+
 // MIDDLE CONTENT 
 
 // loop tried
-/*
-let mainContent = document.querySelectorAll('section h4');
-for (let i = 1; i < mainContent.clientHeight; i++) {
-  mainContent[i].textContent = 'hello';
-}
-*/
+
+// let mainContent = document.querySelectorAll('section h4');
+// for (let i = 1; i < mainContent.clientHeight; i++) {
+//   mainContent[i].textContent = 'hello';
+// }
+
+let mainCont = document.querySelector('.main-contemt .top-content');
+let mainText = document.querySelector('.text-content');
+// let mainObj = siteContent.main-content;
+// let mainValues = Object.value(mainObj);
+// [...mainText].forEach((link, index) => {
+//   link.textContent = mainValues[index];
+// });
 
 let featuresTitle = document.querySelector('div.top-content > div:nth-child(1) > h4');
 featuresTitle.textContent = siteContent["main-content"]["features-h4"];
@@ -127,14 +136,12 @@ visionTitle.textContent = siteContent["main-content"]["vision-h4"];
 let visionContent = document.querySelector('div.bottom-content > div:nth-child(3) > p');
 visionContent.textContent = siteContent["main-content"]["vision-content"];
 
+
+
 // CONTACT
 
 let contactTitle = document.querySelector(' section.contact > h4');
 contactTitle.textContent = siteContent["contact"]["contact-h4"];
-
-//let contactInfo = document.querySelector('section.contact > p');
-//contactInfo.textContent = siteContent["contact"]["address"]
-
 
 //const contactBar = document.querySelector('.contact');
 const contactP = document.querySelectorAll(' section.contact > p');
@@ -144,24 +151,7 @@ let contactValues = Object.values(contactObj);
   p.textContent = contactValues[index+1];
 })
 
-// let contact = document.querySelector('.contact p');
-// for (let i = 0; contact.lenght; i++) {
-//   contact[i].textContent = siteContent.contact[`contact {i+i}`];
-// }
 
-// let nav = document.querySelectorAll("nav a");
-// for (i = 0; i < nav.length; i++) {
-//   nav[i].textContent = siteContent.nav[`nav-item-${i+1}`];
-// }
-
-
-// let navBar = document.querySelector('nav');
-// let navLinks = navBar.querySelectorAll('a');
-// let navObj = siteContent.nav;
-// let navValues = Object.values(navObj);
-// [...navLinks].forEach((link, index) => {
-//   link.textContent = navValues[index];
-// });
 
 // let nav = documnet.querySelector('nav');
 // nav.style.color = "inherit";
