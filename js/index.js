@@ -71,8 +71,8 @@ let navValues = Object.values(navObj);
 [...navLinks].forEach((link, index) => {
   link.textContent = navValues[index];
 });
-//navValues.setAttribute('style', 'color: green');
-
+// navBar.setAttribute('style', 'color: green');
+// navLinks.setAttribute('style', 'color:red');
 
 // NEW CONTENT USING .appendChild()
 const navNew = document.createElement('a');
@@ -98,10 +98,11 @@ nav.appendChild(navNew1);
 
 let mainCont = document.querySelector('.main-contemt .top-content');
 let mainText = document.querySelector('.text-content');
+// mainText.setAttribute('style', 'color: green');
 // let mainObj = siteContent.main-content;
 // let mainValues = Object.value(mainObj);
 // [...mainText].forEach((link, index) => {
-//   link.textContent = mainValues[index];
+  // link.textContent = mainValues[index];
 // });
 
 let featuresTitle = document.querySelector('div.top-content > div:nth-child(1) > h4');
@@ -151,6 +152,10 @@ let contactValues = Object.values(contactObj);
   p.textContent = contactValues[index+1];
 })
 
+// FOOTER
+
+let footer = document.querySelector('footer');
+footer.textContent = siteContent["footer"]["copyright"];
 
 
 // let nav = documnet.querySelector('nav');
