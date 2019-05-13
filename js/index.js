@@ -163,13 +163,6 @@ let contactValues = Object.values(contactObj);
 //   link.textContent = navValues[index];
 // });
 
-// let navigation1 = document.querySelector("body > div > header > nav > a:nth-child(1)").textContent = "Home";
-// let navigation2 = document.querySelector("body > div > header > nav > a:nth-child(2)").textContent = "About";
-// let navigation3 = document.querySelector("body > div > header > nav > a:nth-child(3)").textContent = "Contact";
-// let navigation4 = document.querySelector("body > div > header > nav > a:nth-child(4)").textContent = "Home";
-// let navigation5 = document.querySelector("body > div > header > nav > a:nth-child(5)").textContent = "Home";
-// let navigation6 = document.querySelector("body > div > header > nav > a:nth-child(6)").textContent = "Home";
-
 // let nav = documnet.querySelector('nav');
 // nav.style.color = "inherit";
 
