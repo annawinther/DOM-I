@@ -44,16 +44,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Task 1: Create selectors to point your data into elements
 // use IDs to update crs path content
 let callToAction = document.getElementById("cta-img");
-callToAction.setAttribute('src', 'img/header-img.png');
+callToAction.setAttribute('src', siteContent["cta"]['img-src']);
 
 let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let topContent = document.querySelector('h1');
-topContent.textContent = "Innovation On Demand";
+topContent.textContent = siteContent["cta"]["h1"];
 
 let button = document.querySelector('button');
-button.textContent = "Get Started";
+button.textContent = siteContent["cta"]["button"];
 // button.setAttribute('style', 'color: green');
 
 
