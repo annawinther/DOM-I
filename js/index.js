@@ -70,6 +70,7 @@ let navObj = siteContent.nav;
 let navValues = Object.values(navObj);
 [...navLinks].forEach((link, index) => {
   link.textContent = navValues[index];
+  link.setAttribute('style', 'color: green');
 });
 // navBar.setAttribute('style', 'color: green');
 // navLinks.setAttribute('style', 'color:red');
@@ -77,12 +78,14 @@ let navValues = Object.values(navObj);
 // NEW CONTENT USING .appendChild()
 const navNew = document.createElement('a');
 navNew.textContent = 'Home';
+navNew.setAttribute('style', 'color: green');
 
 const nav = document.querySelector('nav');
 nav.appendChild(navNew);
 
 const navNew1 = document.createElement('a');
 navNew1.textContent = 'Blog';
+navNew1.setAttribute('style', 'color: green');
 
 const nav1 = document.querySelector('nav');
 nav.appendChild(navNew1);
